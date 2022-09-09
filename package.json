@@ -1,0 +1,21 @@
+{
+  "name": "website-oetete",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "express-favicon": "^2.0.1",
+    "express-fonts": "^1.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "node-system-fonts": "^1.0.1",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "^2.5.0"
+  }
+}

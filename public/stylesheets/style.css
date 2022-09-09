@@ -1,0 +1,194 @@
+.bg-bluedark {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #746FA6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bg-bluemoon {
+    background: #607EAA;
+}
+
+.maps:hover {
+    animation: shake 2.0s;
+    animation-iteration-count: infinite;
+}
+
+.hover-maps {
+    background: linear-gradient(to right, rgb(0, 0, 0) 50%, #6175b9 50%, #347aa8);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+}
+
+.hover-maps:hover {
+    background-position: -100%;
+}
+
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px)rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px)rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px)rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px)rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px)rotate(-1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px)rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px)rotate(-1deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px)rotate(-deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px)rotate(-1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px)rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -1px)rotate(-1deg);
+    }
+}
+
+.transition-page-1 {
+    animation: transitionIn 0.75s ease-in;
+}
+
+@keyframes transitionIn {
+
+    from {
+        opacity: 0;
+        transform: rotateX(-10px);
+    }
+
+    to {
+        opacity: 2;
+        transform: rotateX(0);
+    }
+}
+
+
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #000000;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1em;
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .navbar-brand {
+        padding: 0 0.7em;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 1em 0;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        margin: 0 1em;
+    }
+}
+
+.navbar .navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #000000;
+    width: 0%;
+    content: "";
+    height: 4px;
+    transition: all .5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+.underline-hover{
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+.underline-hover::before{
+    content: "";
+    position: absolute;
+    /* left: 0; */
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(to right, rgb(209, 209, 209), rgb(184, 184, 184));
+
+    transition: width 0.25s ease-out;
+}
+
+.underline-hover:hover::before{
+    width: 100%;
+    left:0;
+    right:auto;
+
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+::-webkit-scrollbar
+{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track
+{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    background-color: #607EAA;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #43556e;
+}
