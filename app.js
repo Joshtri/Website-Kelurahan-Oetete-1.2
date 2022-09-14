@@ -57,7 +57,7 @@ app.use('/users', usersRouter);
 app.use('/profil', profilRouter);
 app.use('/', petaRouter);
 app.use('/pemerintahan',pemerintahanRouter)
-app.use('/data',dataRouter);
+app.use('/data  ',dataRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

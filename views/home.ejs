@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,35 +9,32 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/footer.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <link rel="icon" href="/public/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-    
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 </head>
 
 <body class="transition-page-1">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
 
     <!-- header start -->
     <%- include('header'); -%>
         <!-- header end   -->
 
-        
         <div class="container-fluid carousel py-5">
             <div class="row m-0">
-
                 <div class="col-md-6">
                     <div class="container bordered">
-                        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="/images/BoardOetete.png" class="d-block w-100 rounded-3"
@@ -69,10 +65,10 @@
 
                 <div class="col-sm-5 pe-md-7 py-3">
 
-                    <h1 style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><span><u>Selamat Datang</u></span></h1>
-                    <p style="font-family:Arial;">di website kelurahan Cinta Statistik (Cantik) - wilayah
+                    <h1 style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><span class="fade-in-4s">Selamat Datang</span></h1>
+                    <p style="font-family:Arial;" class="fade-in-7s">di website kelurahan Cinta Statistik (Cantik) - wilayah
                         Oetete.</p>
-                    <p style="font-family:Arial;" class="py-3">Website ini dibuat dengan tujuan memvisualisasi
+                    <p style="font-family:Arial;" class="py-3 fade-in-12s">Website ini dibuat dengan tujuan memvisualisasi
                         data yang
                         ada pada
                         Kelurahan Oetete agar dapat mempermudah pengunjung untuk mencakup informasi
@@ -81,7 +77,7 @@
                     <img src="/images/mapss blue.png" alt="" style="width: 20%; height: auto ;"
                         class="px-md-0 pt-2 maps cursor-pointer"><span style="font-family:Arial; font-size: 18px;">
                             
-                            <a href="/peta"style="color:#000;" class="hover-maps"><u><b>LOKASI KELURAHAN OETETE</b></u></a></span>
+                            <a href="/peta" style="color: var(--textcolor);" class="hover-maps fade-in-17s"><u><b>LOKASI KELURAHAN OETETE</b></u></a></span>
                 </div>
             </div>
         </div>
@@ -90,8 +86,10 @@
         <nav class="navbar navbar-expand-lg bg-bluemoon">
             <h3 class="mx-auto text-light underline-hover cursor-pointer">DATA PENDUDUK</h3>
         </nav>
+
         <figure class="highcharts-figure">
-            <div id="penduduk-home"></div>
+            <div id="penduduk-home">
+            </div>
         </figure>
 
 
@@ -106,7 +104,7 @@
         <div class="mx-auto p-5 pt-5">
             <div class="row pt-4 justify-content-center" style="gap: .5rem">
 
-                <div class="card bg-info" style="width: 15rem;">
+                <div class="card bg-info rectangle1" style="width: 15rem;">
                     <div class="card-body">
                         <div class="card-body-icon"
                             style="position: absolute; z-index: 0; top: 25px; right: 4px; opacity:0.4 ; font-size: 60px;">
@@ -121,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-info" style="width: 15rem;">
+                <div class="card bg-info rectangle3" style="width: 15rem;">
                     <div class="card-body">
                         <div class="card-body-icon"
                             style="position: absolute; z-index: 0; top: 25px; right: 4px; opacity:0.4 ; font-size: 60px;">
@@ -136,7 +134,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-info" style="width: 15rem;">
+                <div class="card bg-info rectangle4" style="width: 15rem;">
                     <div class="card-body">
                         <div class="card-body-icon"
                             style="position: absolute; z-index: 0; top: 25px; right: 4px; opacity:0.4 ; font-size: 60px;">
@@ -152,8 +150,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
         <nav class="navbar navbar-expand-lg bg-bluemoon">
@@ -175,7 +171,7 @@
         <div class="mx-auto p-5 pt-5">
             <div class="row pt-4 justify-content-center" style="gap: .5rem">
 
-                <div class="card bg-info" style="width: 15rem;">
+                <div class="card bg-info rectangle3" style="width: 15rem;">
                     <div class="card-body">
                         <div class="card-body-icon"
                             style="position: absolute; z-index: 0; top: 25px; right: 4px; opacity:0.4 ; font-size: 60px;">
@@ -190,7 +186,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-info" style="width: 15rem;">
+                <div class="card bg-info rectangle2" style="width: 15rem;">
                     <div class="card-body">
                         <div class="card-body-icon"
                             style="position: absolute; z-index: 0; top: 25px; right: 4px; opacity:0.4 ; font-size: 60px;">
@@ -205,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="card bg-info" style="width: 15rem;">
+                <div class="card bg-info rectangle1" style="width: 15rem;">
                     <div class="card-body">
                         <div class="card-body-icon"
                             style="position: absolute; z-index: 0; top: 25px; right: 4px; opacity:0.4 ; font-size: 60px;">
@@ -222,14 +218,13 @@
             </div>
         </div>
 
-
         <nav class="navbar navbar-expand-lg bg-bluemoon">
             <h3 class="mx-auto text-light underline-hover cursor-pointer">PUBLIKASI</h3>
         </nav>
 
         <br><br><br>
 
-        <table id="example" class="table mt-5 mt-5 table-str table-hover table-bordered" style="width:95% ;">
+        <table id="example" class="table mt-5 mt-5 table-str table-bordered" style="width:95% ;">
             <thead>
                 <tr>
                     <th scope="col" class="text-center">No.</th>
@@ -249,21 +244,28 @@
             </tbody>
         </table>
 
-
         <br><br><br><br><br><br>
-       
 
 
+        <%-include('scrollUp'); -%>       
         <%-include('footer'); -%>
+
+    
 
         
 
-        <script src="/javascripts/document.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
         <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="/javascripts/document.js"></script>
+        
+        <script src="/javascripts/scrollTop.js"></script>
+      
 
         <script src="https://kit.fontawesome.com/bd1d04a488.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- Highchart js Library. -->
-
 
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/highcharts-3d.js"></script>
@@ -273,9 +275,11 @@
         <script src="/javascripts/stats-umkm-home.js"></script>
         <script src="/javascripts/stats-penduduk-home.js"></script>
         <script src="https://code.highcharts.com/highcharts.js"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
             integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
             crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
             crossorigin="anonymous"></script>
