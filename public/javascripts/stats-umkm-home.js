@@ -45,3 +45,7 @@ Highcharts.chart('umkm-home', {
       ]
     }]
   });
+
+
+ 
+  

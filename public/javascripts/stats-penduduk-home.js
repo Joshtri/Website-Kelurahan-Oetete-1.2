@@ -43,3 +43,5 @@ Highcharts.chart('penduduk-home', {
       ]
     }]
   });
+
+
