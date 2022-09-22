@@ -19,7 +19,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="/stylesheets/article.css">
+  <link rel="stylesheet" href="/stylesheets/animtext.css">
 </head>
 
 <body class="transition-page-1">
@@ -33,10 +33,9 @@
     <div class="d-flex justify-content-center">
       <h2 class="mt-3 typings mx-auto" id="type">Sejarah Kelurahan Oetete</h2>
     </div>
-
     <br>
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -79,15 +78,15 @@
         <span class="carousel-control-next-icon bg-danger" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
-    image.png
+    </div> -->
+   
     <div class="container mt-4">
       <div>
         <h3 class="mb-3 underline-hover-arc cursor-pointer">PENGANTAR</h3>
-      </div>
-      <div class="card-body mx-auto col-lg-12 shadow-lg rounded-3">
+      </div>  
+      <div class="card-body mx-auto col-lg-12 shadow-lg rounded-3 rectangle3">
         <article>
-          <p class="justify-content-center fs-6 fade-in-12s">
+          <p class="justify-content-center fs-6 paragraph-page-test">
             <br>
             Kita sebagai masyarakat Nusa Tenggara Timur khususnya di wilayah Kota Kupang tidak asing dengan Oetete,
             banyak yang mengenal Oetete sebagai nama kelurahan/desa. <br><br>
@@ -120,9 +119,9 @@
     
     <div class="container mt-5">
       <div>
-        <h3 class="mb-2 underline-hover-arc">TITIK MULA TERCIPTA NAMA <u>'OETETE'</u></h3>
+        <h3 class="mb-3 underline-hover-arc">TITIK MULA TERCIPTA NAMA <u>'OETETE'</u></h3>
       </div>
-      <div class="card-body mx-auto col-lg-12 shadow-lg rounded-3">
+      <div class="card-body mx-auto col-lg-12 shadow-lg rounded-3 rectangle3">
         <article>
 
 
@@ -151,8 +150,7 @@
             kehidupannya.
           </p>
 
-
-
+          
           <div class="card container col-12">
             <div class="card-header bg-bluemoon">
               <div class="text-center text-white">
@@ -192,7 +190,7 @@
                       <blockquote class="blockquote mb-0 text-black">
                         <p class="fs-6">
                             Nama "Oetete" sebagai nama dari wilayah pemerintah (desa oetete), muncul pertama kali pada tahun 1953, ketika status kota kupang disamakan
-                            menjadi sebuah Kecamatan berdasarkan SK. <br><br> Mendagri tanggal 22 Oktober 1953 No. PUD 5/16/46. 
+                            menjadi sebuah Kecamatan berdasarkan SK. <br><br> <strong>Mendagri tanggal 22 Oktober 1953 No. PUD 5/16/46</strong>. 
                         </p>
                      
                       </blockquote>
@@ -201,13 +199,9 @@
                 </div>
               </div>
             </div>
+
             <!-- Modal -->
-            
-
-
-
-
-          </div>
+           </div>
         </article>
       </div>
     </div>
@@ -215,9 +209,10 @@
 
 
 
-    <button id="btnScrollUp" onclick="topFunction()">
+    <!-- <button id="btnScrollUp" onclick="topFunction()">
       <i class="material-icons">arrow_upward</i>
-    </button>
+    </button> -->
+
     <script type="text/javascript">
       var i = 0;
       var text = "SEJARAH KELURAHAN OETETE";
@@ -232,13 +227,9 @@
       }
       type();
     </script>
-    <br><br><br><br><br><br><br>
+    <br><br><br>
+    <%-include('scrollUp'); -%>    
     <%-include('footer'); -%>
-
-
-
-
-
 
 
 

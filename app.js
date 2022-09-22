@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var favicon = require('express-favicon');
 var fonts = require('express-fonts');
+var mysql = require('mysql');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,6 +13,7 @@ var profilRouter = require('./routes/profil');
 var petaRouter = require('./routes/peta');
 var pemerintahanRouter = require('./routes/gov');
 var dataRouter = require('./routes/data');
+var statisticsRouter = require('./routes/stats')
 
 var app = express();
 
@@ -39,11 +41,6 @@ app.use(cookieParser());
 //use for favicon.
 app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
-
-
-
-
-
 //use for fonts. 
 
 // app.use(fonts({
@@ -57,7 +54,8 @@ app.use('/users', usersRouter);
 app.use('/profil', profilRouter);
 app.use('/', petaRouter);
 app.use('/pemerintahan',pemerintahanRouter)
-app.use('/data  ',dataRouter);
+app.use('/data',dataRouter);
+app.use('/statistics',statisticsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

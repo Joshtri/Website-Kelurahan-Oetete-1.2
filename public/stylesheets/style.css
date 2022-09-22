@@ -7,6 +7,18 @@
     background: var(--navbarcolor2)
 }
 
+.bg-xx1{
+    background: #F9F9F9;
+}
+
+.bg-xx2{
+    background: #F6C6EA;
+}
+
+.btn-yellowwhite{   
+    background: #EAE3D2;
+}
+
 :root {
     --navbarcolor2: #607EAA;
     --navbarcolor: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #746FA6;
@@ -41,6 +53,8 @@ footer a {
     color: white;
 }
 
+
+
 .marquee {
     color: var(--textcolor);
 }
@@ -56,7 +70,7 @@ footer a {
 }
 
 .hover-maps {
-    background: linear-gradient(to right, var(--textcolor) 50%, #6175b9 50%, #347aa8);
+    background: linear-gradient(to right, rgb(0, 0, 0) 50%, #6175b9 50%, #347aa8);
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,11 +80,6 @@ footer a {
 .hover-maps:hover {
     background-position: -100%;
 }
-
-#example {
-    color: var(--textcolor);
-}
-
 
 
 
@@ -121,7 +130,6 @@ footer a {
 }
 
 
-@keyframes
 
 .transition-page-1 {
     animation: transitionIn 0.75s ease-in;
@@ -316,6 +324,23 @@ footer a {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
 
+.rectangle5,
+.rectangle6,
+.rectangle7,
+.rectangle8 {
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+
+    cursor: pointer;
+}
+
+.rectangle5:hover,
+.rectangle6:hover,
+.rectangle7:hover,
+.rectangle8:hover {
+    transform: scale(1.15);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06); */
+}
+
 
 @keyframes blink {
     50% {
@@ -382,3 +407,12 @@ footer a {
     animation: 2.0s;
     animation-iteration-count: infinite;
 }
+
+.preloader{
+    background: #000;
+    height: 100vh ;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
