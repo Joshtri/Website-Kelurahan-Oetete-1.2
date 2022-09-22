@@ -1,3 +1,14 @@
-buat utk tab data yg nnti isinya sub bab berupa data dan statistik. (contoh sama kek di desa mujur).
+list bug di website : 
 
-buat sama kyk side bar di desa mujur. 
+	1. Chart umur
+	2. Chart pendidikan
+	3. Chart UMKM 
+
+list chart aman :
+	
+	1. Chart Jenis Kelamin
+	2. Chart pekerjaan
+	3. Status pernikahan	
+
+
+Note : Sementara lagi buat back-end, koneksi DB.
