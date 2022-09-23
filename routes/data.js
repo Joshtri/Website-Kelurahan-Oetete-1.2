@@ -30,6 +30,9 @@ router.get('/data-statuspernikahan', function(req,res,next){
 });
 
 
+// router.get('/apitumbal', function(req,res,next){
+
+// });
 
 
 //Diluar konteks utk oetete.

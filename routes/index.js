@@ -22,4 +22,9 @@ router.get('/footer', function(req,res,next){
 
 });
 
-module.exports = router;
+router.get('/error', function(req,res,next){
+
+
+});
+
+module.exports = router;  
