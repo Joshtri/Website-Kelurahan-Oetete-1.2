@@ -5,59 +5,60 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var favicon = require("express-favicon");
 var fonts = require("express-fonts");
-const { db } = require("./model/dbConnection");
+
 var bodyParser = require("body-parser");
 var cors = require("cors");
+var mysql = require("mysql");
+
+require("dotenv").config();
 
 var app = express();
-app.get("/api/readData", (req, res) => {
-  const sqlQuery = "SELECT * FROM tumbal";
 
-  db.query(sqlQuery, (err, result) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.send(result);
-      console.log(result);
-    }
-  });
-});
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-var profilRouter = require("./routes/profil");
-var petaRouter = require("./routes/peta");
-var pemerintahanRouter = require("./routes/gov");
-var dataRouter = require("./routes/data");
-var statisticsRouter = require("./routes/stats");
+const port = process.env.PORT || "3001";
 
-// Specific folder example
-// app.use(express.static('public'));
-// app.use('/css', express.static(__dirname + 'public/css'))
-// app.use('/js', express.static(__dirname + 'public/js'))
-// app.use('/img', express.static(__dirname + 'public/img'))
-
-// read
-
+// static files.
 app.use(express.static(__dirname + "/public"));
+
+app.use(logger("dev"));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Parse application/json
+app.use(bodyParser.json());
+
+app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.use(cors());
-app.use(logger("dev"));
-app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }));
+const pool = mysql.createPool({
+  connectionLimit: 100,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+});
 
-// app.use(express.static(path.join(__dirname, 'public/images')));
 
-//use for favicon.
-app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
+//connect db. 
+pool.getConnection((err,connection)=>{
+  if(err) throw err;
+  console.log(`Connected as ID ` + connection.threadId);
+});
 
-//use for fonts.
+var indexRouter = require("./server/routes/index");
+var usersRouter = require("./server/routes/users");
+var profilRouter = require("./server/routes/profil");
+var petaRouter = require("./server/routes/peta");
+var pemerintahanRouter = require("./server/routes/gov");
+var dataRouter = require("./server/routes/data");
+var statisticsRouter = require("./server/routes/stats");
+const { application } = require("express");
 
+//Router.
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/profil", profilRouter);
@@ -82,4 +83,4 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-module.exports = app;
+app.listen(port, () => console.log(`listening on ${port}`));

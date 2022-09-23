@@ -1,7 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const userController = require('../controllers/dataController');
 
 /* GET data page. */
+
+//create, find, update, delete.
 
 
 // Data page berupa penduduk
@@ -9,9 +12,14 @@ router.get('/data-penduduk', function (req, res, next) {
     res.render('data-penduduk');
 });
 
-router.get('/data-pendidikan', function(req,res,next){
-    res.render('data-pendidikan');
-});
+router.get('/data-pendidikan',userController.view);
+
+
+    //lock this for a while.
+
+// router.get('/data-pendidikan', function(req,res,next){
+//     res.render('data-pendidikan');
+// });
 
 router.get('/data-pekerjaan', function(req,res,next){
     res.render('data-pekerjaan');

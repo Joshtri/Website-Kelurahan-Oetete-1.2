@@ -90,7 +90,7 @@
             </div>
           
             <!-- First Row -->
-            <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm "
+            <!-- <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm "
             cellspacing="0" width="100%">
             <thead>
                 <tr>
@@ -175,9 +175,46 @@
                     <td scope="row" class="text-center">3</td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
             
         </div>
+    
+        <div class="card-body card mx-auto col-11 p-5 pt-5 shadow-lg border-3">
+            <div class="mb-2">
+                <div class="card card-group float-start me-3 ms-3"> 
+                    <h3>&nbsp&nbspData Tabel Pendidikan&nbsp&nbsp</h3>
+                </div>
+            </div>
+          
+            <!-- First Row -->
+            <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm "
+            cellspacing="0" width="100%">
+            <thead>
+                    
+                <tr>
+                    <th scope="col" class="text-center">No.</th>
+                    <th scope="col" class="text-center">Nama</th>
+                    <th scope="col" class="text-center">Password</th>
+                
+                </tr>
+                    
+            </thead>
+            <tbody>
+                <% for (let row of rows) {%>
+                <tr>
+
+                    <td scope="row" class="text-center">1</td>
+                    <td scope="row" class="text-center"><%= row.nama %></td>
+                    <td scope="row" class="text-center"><%= row.password %></td>
+               
+                </tr>
+                <% }%>
+                
+              
+            </tbody>
+        </table>
+            
+        </div
 
    
     <br><br>
