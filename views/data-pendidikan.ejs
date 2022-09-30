@@ -33,24 +33,11 @@
     <div class="container mt-1 main-container">
         <div class="">
             <div class="row mt-5">
-                <div class="col-md-7 col-lg-4">
+                <div class="col-md-4 col-lg-3">
                     <div id="accordion">
-                        <div class="card mb-1">
-                            <button>
-                                Statistik Penduduk
-                            </button>
-                            
-                        </div>
-
-                        <div class="card mb-1">
-                            <button>
-                                Statistik UMKM 
-                            </button>
-                        </div>
+                        <%- include('sidebar'); -%>
                     </div>
-
                 </div>
-                   
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -84,7 +71,7 @@
 
         <div class="card-body card mx-auto col-11 p-5 pt-5 shadow-lg border-3">
             <div class="mb-2">
-                <div class="card card-group float-start me-3 ms-3"> 
+                <div class="float-start me-3 ms-3"> 
                     <h3>&nbsp&nbspData Tabel Pendidikan&nbsp&nbsp</h3>
                 </div>
             </div>
@@ -181,8 +168,8 @@
     
         <div class="card-body card mx-auto col-11 p-5 pt-5 shadow-lg border-3">
             <div class="mb-2">
-                <div class="card card-group float-start me-3 ms-3"> 
-                    <h3>&nbsp&nbspData Tabel Pendidikan&nbsp&nbsp</h3>
+                <div class="float-start me-3 ms-3"> 
+                    <h3">&nbsp&nbsp <span class="text text-decoration-underline h3">Data Tabel Pendidikan</span>&nbsp&nbsp</h3>
                 </div>
             </div>
           
@@ -200,13 +187,16 @@
                     
             </thead>
             <tbody>
+                <% var number = 1; %>
                 <% for (let row of rows) {%>
-                <tr>
-
-                    <td scope="row" class="text-center">1</td>
+                    <tr>
+                        
+                        
+                    <td scope="row" class="text-center"><%= number %></td>
                     <td scope="row" class="text-center"><%= row.nama %></td>
                     <td scope="row" class="text-center"><%= row.password %></td>
-               
+                
+                    <% number++; %>
                 </tr>
                 <% }%>
                 

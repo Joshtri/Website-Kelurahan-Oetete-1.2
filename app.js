@@ -56,7 +56,7 @@ var petaRouter = require("./server/routes/peta");
 var pemerintahanRouter = require("./server/routes/gov");
 var dataRouter = require("./server/routes/data");
 var statisticsRouter = require("./server/routes/stats");
-const { application } = require("express");
+
 
 //Router.
 app.use("/", indexRouter);

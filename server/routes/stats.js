@@ -156,4 +156,21 @@ router.get('/statistik/umkm', function (req, res, next) {
 });
 
 
+router.get('/statistik/penduduk', function (req, res, next) {
+    // konek
+    // data dari tabel
+    res.json(
+        {
+            label: ["My First dataset"],
+            backgroundColor: [
+                "rgb(128,0,0)",
+                "rgb(139,0,0)",
+                "rgb(165,42,42)",
+            ],
+            data: [10, 15],
+            hoverOffset: 4,
+        },
+    );
+
+});
 module.exports = router;

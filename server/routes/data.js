@@ -8,11 +8,11 @@ const userController = require('../controllers/dataController');
 
 
 // Data page berupa penduduk
-router.get('/data-penduduk', function (req, res, next) {
-    res.render('data-penduduk');
-});
+// router.get('/data-penduduk', function (req, res, next) {
+//     res.render('data-penduduk');
+// });
 
-router.get('/data-pendidikan',userController.view);
+router.get('/data-pendidikan',userController.view_pendidikan);
 
 
     //lock this for a while.
@@ -21,31 +21,22 @@ router.get('/data-pendidikan',userController.view);
 //     res.render('data-pendidikan');
 // });
 
-router.get('/data-pekerjaan', function(req,res,next){
-    res.render('data-pekerjaan');
-});
+router.get('/data-pekerjaan',userController.view_pekerjaan);
 
-router.get('/data-umur', function(req,res,next){
-    res.render('data-umur');
-});
+router.get('/data-umur',userController.view_umur );
+   
 
-router.get('/data-jeniskelamin', function(req,res,next){
-    res.render('data-jeniskelamin');
-});
+router.get('/data-jeniskelamin', userController.view_jeniskelamin);
 
-router.get('/data-statuspernikahan', function(req,res,next){
-    res.render('data-statuspernikahan');
-});
+
+router.get('/data-statuspernikahan', userController.view_statuspernikahan)
 
 
 // router.get('/apitumbal', function(req,res,next){
 
 // });
 
-
 //Diluar konteks utk oetete.
-router.get('/data-umkm', function(req,res,next){
-    res.render('data-umkm');
-});
+router.get('/data-umkm',userController.view_umkm);
 
 module.exports = router;

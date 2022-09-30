@@ -20,7 +20,7 @@
     "mysql": "^2.18.1",
     "node-system-fonts": "^1.0.1",
     "nodemon": "^2.0.20",
-    "pug": "2.0.0-beta11",
+    "pug": "^2.0.4",
     "serve-favicon": "^2.5.0"
   }
 }

@@ -286,6 +286,20 @@ footer a {
     animation: fadeIn 7s;
 }
 
+.fade-in-7s-w-animation {
+    transform: translateY(300px);
+    animation: slideUp .8s ease-in-out forwards .8s;
+    animation: fadeIn 7s;
+}
+@keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
 .fade-in-12s {
     animation: fadeIn 12s;
 }

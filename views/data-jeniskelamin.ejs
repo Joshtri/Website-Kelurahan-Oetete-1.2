@@ -33,20 +33,9 @@
     <div class="container mt-1 main-container">
         <div class="">
             <div class="row mt-5">
-                <div class="col-md-4 col-lg-4">
+                <div class="col-md-4 col-lg-3">
                     <div id="accordion">
-                        <div class="card mb-1">
-                            <button>
-                                Statistik Penduduk
-                            </button>
-                            
-                        </div>
-
-                        <div class="card mb-1">
-                            <button>
-                                Statistik UMKM 
-                            </button>
-                        </div>
+                        <%- include('sidebar'); -%>
                     </div>
                 </div>
             </div>
@@ -83,14 +72,14 @@
 
         <div class="card-body card mx-auto col-11 p-5 pt-5 shadow-lg border-3">
             <div class="mb-2">
-                <div class="card card-group float-start me-3 ms-3"> 
-                    <h3>&nbsp&nbspData Tabel Jenis Kelamin&nbsp&nbsp</h3>
+                <div class="float-start me-3 ms-3"> 
+                    <h3>&nbsp&nbsp <span class="text text-decoration-underline h3">Data Tabel Jenis Kelamin</span>&nbsp&nbsp</h3>
                 </div>
             </div>
           
             <!-- First Row -->
             <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm "
-                cellspacing="0" width="100%">
+                cellspacing="0" width="100%" style="color:  var(--textcolor);">
                 <thead>
                     <tr>
                         <th scope="col" class="text-center">No</th>
@@ -100,12 +89,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="row" class="text-center">1</td>
+                    <% var number = 1; %>            
+                    <tr style="color:  var(--textcolor);">
+                        <td scope="row" class="text-center"><%= number%></td>
                         <td scope="row" class="text-center">3</td>
                         <td scope="row" class="text-center">4</td>
                         <td scope="row" class="text-center">7</td>
-                    </tr>                        
+                    </tr>
+                    <% number++%>
                 </tbody>
             </table>
 

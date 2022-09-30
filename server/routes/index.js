@@ -24,7 +24,12 @@ router.get('/footer', function(req,res,next){
 });
 
 router.get('/error', function(req,res,next){
+  res.render('error')
 
+});
+
+router.get('/sidebar', function(req,res,next){
+  res.render('sidebar')
 
 });
 
