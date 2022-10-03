@@ -9,6 +9,7 @@ var fonts = require("express-fonts");
 var bodyParser = require("body-parser");
 var cors = require("cors");
 var mysql = require("mysql");
+var cons = require('consolidate');
 
 require("dotenv").config();
 
@@ -32,7 +33,12 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+app.set("view engine", "ejs","pug");
+
+
+
+
+
 
 const pool = mysql.createPool({
   connectionLimit: 100,

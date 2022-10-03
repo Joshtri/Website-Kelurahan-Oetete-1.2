@@ -430,3 +430,6 @@ footer a {
     z-index: 100;
 }
 
+.text-justify{
+    text-align: justify;
+}

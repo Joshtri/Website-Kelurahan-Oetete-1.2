@@ -1,23 +1,3 @@
-const bar = document.getElementById("bar");
-const pie = document.getElementById("pie");
-const doughnut = document.getElementById("doughnut");
-
-bar.addEventListener("click", changebar);
-pie.addEventListener("click", changepie);
-doughnut.addEventListener("click", changedoughnut);
-
-function changebar() {
-  console.log("changebar function");
-}
-
-function changepie() {
-  console.log("changepie function");
-}
-
-function changedoughnut() {
-  console.log("changedoughnut function");
-}
-
 const labels = ["Sudah Menikah", "Belum Menikah", "Cerai Hidup", "Cerai Mati"];
 
 const data = {
@@ -39,9 +19,10 @@ const data = {
 };
 
 const config = {
-    type: "pie",
+    type: "bar",
     data: data,
     options: {
+      maintainAspectRatio: false,
         plugins: {
             title: {
                 display: true,
@@ -51,7 +32,36 @@ const config = {
     },
 };
 
-const myChart = new Chart(document.getElementById("Status-Chart"), config);
+const config2 = {
+  type: "doughnut",
+  data: data,
+  options: {
+    maintainAspectRatio: false,
+      plugins: {
+          title: {
+              display: true,
+              text: 'Grafik Status Pernikahan'
+          }
+      }
+  },
+};
+
+
+const config3 = {
+  type: "pie",
+  data: data,
+  options: {
+    maintainAspectRatio: false,
+      plugins: {
+          title: {
+              display: true,
+              text: 'Grafik Status Pernikahan'
+          }
+      }
+  },
+};
+
+let myChart = new Chart(document.getElementById("Status-Chart"), config);
 
 axios.get('/statistik/statistik/status').then(e => {
     console.log(e);
@@ -60,22 +70,19 @@ axios.get('/statistik/statistik/status').then(e => {
 });
 
 
+// render init block
+function ChartType(type) {
+  //destroy chart
+  myChart.destroy();
+  if (type === "bar") {
+    myChart = new Chart(document.getElementById("Status-Chart"), config);
+  }
 
-function changebar() {
-    const updatetype = "bar";
-    myChart.config.type = updatetype;
-    myChart.update();
+  if (type === "doughnut") {
+    myChart = new Chart(document.getElementById("Status-Chart"), config2);
   }
-  
-  function changepie() {
-    const updatetype = "pie";
-    myChart.config.type = updatetype;
-    myChart.update();
+
+  if (type === "pie") {
+    myChart = new Chart(document.getElementById("Status-Chart"), config3);
   }
-  
-  function changedoughnut() {
-    const updatetype = "doughnut";
-    myChart.config.type = updatetype;
-    myChart.update();
-  }
-  
+}

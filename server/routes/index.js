@@ -33,4 +33,9 @@ router.get('/sidebar', function(req,res,next){
 
 });
 
+router.get('/tester', function(req,res,next){
+  res.render('tester')
+
+});
+
 module.exports = router;  

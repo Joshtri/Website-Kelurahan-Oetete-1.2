@@ -1,23 +1,3 @@
-const bar1 = document.getElementById("bar1");
-const pie1 = document.getElementById("pie1");
-const doughnut1 = document.getElementById("doughnut1");
-
-bar1.addEventListener("click", changebar);
-pie1.addEventListener("click", changepie);
-doughnut1.addEventListener("click", changedoughnut);
-
-function changebar() {
-  console.log("changebar function");
-}
-
-function changepie() {
-  console.log("changepie function");
-}
-
-function changedoughnut() {
-  console.log("changedoughnut function");
-}
-
 const labels1 = ["Usaha Mikro", "Usaha Menengah", "Usaha Kecil"];
 
 const data1 = {
@@ -33,10 +13,11 @@ const data1 = {
   ],
 };
 
-const config1 = {
+const config11 = {
   type: "bar",
   data: data1,
   options: {
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
@@ -46,27 +27,57 @@ const config1 = {
   },
 };
 
-const myChart1 = new Chart(document.getElementById("Usaha-Mikro-Chart"), config1);
+const config22 = {
+  type: "doughnut",
+  data: data1,
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Grafik Kategori Usaha",
+      },
+    },
+  },
+};
+
+
+const config33 = {
+  type: "pie",
+  data: data1,
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Grafik Kategori Usaha",
+      },
+    },
+  },
+};
+
+let myChart1 = new Chart(document.getElementById("Usaha-Mikro-Chart"), config11);
 axios.get("/statistics/statistik/umkm").then((e) => {
   console.log(e);
   myChart1.data.datasets[0].data = e.data.data;
   myChart1.update();
 });
 
-function changebar() {
-  const updatetype = "bar";
-  myChart1.config.type = updatetype;
-  myChart1.update();
-}
 
-function changepie() {
-  const updatetype = "pie";
-  myChart1.config.type = updatetype;
-  myChart1.update();
-}
 
-function changedoughnut() {
-  const updatetype = "doughnut";
-  myChart1.config.type = updatetype;
-  myChart1.update();
+// render init block
+function ChartType(type) {
+  //destroy chart
+  myChart1.destroy();
+  if (type === "bar") {
+    myChart1 = new Chart(document.getElementById("Usaha-Mikro-Chart"), config11);
+  }
+
+  if (type === "doughnut") {
+    myChart1 = new Chart(document.getElementById("Usaha-Mikro-Chart"), config22);
+  }
+
+  if (type === "pie") {
+    myChart1 = new Chart(document.getElementById("Usaha-Mikro-Chart"), config33);
+  }
 }

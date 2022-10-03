@@ -14,5 +14,8 @@ router.get('/header', function (req, res, next) {
 });
 
 
+router.get('/potensi_&_Fasilitas', function (req,res,next){
+    res.render('potensi_Fasilitas');
+});
 
 module.exports = router;

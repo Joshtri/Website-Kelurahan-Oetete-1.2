@@ -48,9 +48,9 @@
                         Ubah Grafik
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><button class="dropdown-item btn" id="bar" href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
-                        <li><button class="dropdown-item" id="pie" href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
-                        <li><button class="dropdown-item" id="doughnut" href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li>
+                        <li><button onclick="ChartType('bar')" class="dropdown-item btn"  href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
+                        <li><button onclick="ChartType('pie')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
+                        <li><button onclick="ChartType('doughnut')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li>
                         
                         <li>
                             <hr class="dropdown-divider">
@@ -59,18 +59,12 @@
                 </li>
             </div>
         </div>
+    </div>
 
-        <div class="col-12">
-            <div class="container-lg" style="width:330px ;">
-                <canvas id="PekerjaanChart"></canvas>
-            </div>
-        </div>
+    <div class="container-fluid">
+        <canvas id="PekerjaanChart" style="position: relative; height:40vh; width:80vw; max-width: fit-content; min-width: fit-content;"></canvas>
     </div>
     
-
-   
-
-
         <br><br><br><br>
 
         <div class="card-body card mx-auto col-11 p-5 pt-5 shadow-lg border-3">

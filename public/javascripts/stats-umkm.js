@@ -1,23 +1,3 @@
-const bar = document.getElementById("bar");
-const pie = document.getElementById("pie");
-const doughnut = document.getElementById("doughnut");
-
-bar.addEventListener("click", changebar);
-pie.addEventListener("click", changepie);
-doughnut.addEventListener("click", changedoughnut);
-
-function changebar() {
-  console.log("changebar function");
-}
-
-function changepie() {
-  console.log("changepie function");
-}
-
-function changedoughnut() {
-  console.log("changedoughnut function");
-}
-
 const labels = ["Usaha Mikro", "Usaha Menengah", "Usaha Kecil"];
 
 const data = {
@@ -37,6 +17,17 @@ const config = {
   type: "bar",
   data: data,
   options: {
+    scales:{
+      x:{
+        ticks:{
+        
+        }
+          
+      }
+    },
+     
+
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
@@ -46,27 +37,55 @@ const config = {
   },
 };
 
-const myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config);
+const config2 = {
+  type: "doughnut",
+  data: data,
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Grafik Kategori Usaha",
+      },
+    },
+  },
+};
+
+const config3 = {
+  type: "pie",
+  data: data,
+  options: {
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Grafik Kategori Usaha",
+      },
+    },
+  },
+};
+
+let myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config);
 axios.get("/statistics/statistik/umkm").then((e) => {
   console.log(e);
   myChart.data.datasets[0].data = e.data.data;
   myChart.update();
 });
 
-function changebar() {
-  const updatetype = "bar";
-  myChart.config.type = updatetype;
-  myChart.update();
-}
 
-function changepie() {
-  const updatetype = "pie";
-  myChart.config.type = updatetype;
-  myChart.update();
-}
+// render init block
+function ChartType(type) {
+  //destroy chart
+  myChart.destroy();
+  if (type === "bar") {
+    myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config);
+  }
 
-function changedoughnut() {
-  const updatetype = "doughnut";
-  myChart.config.type = updatetype;
-  myChart.update();
+  if (type === "doughnut") {
+    myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config2);
+  }
+
+  if (type === "pie") {
+    myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config3);
+  }
 }

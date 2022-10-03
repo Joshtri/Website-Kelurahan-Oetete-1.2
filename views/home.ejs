@@ -16,6 +16,12 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="stylesheets/error404.css" />
+
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -103,15 +109,10 @@
             <h3 class="mx-auto text-light underline-hover cursor-pointer">DATA PENDUDUK</h3>
         </nav>
 
+        <div class="container">
+            <canvas id="penduduk-Chart"  style="position: relative; height:40vh; width:80vw; max-width: fit-content; min-width: fit-content;"></canvas>   
+        </div>
 
-      
-       
-        
-        <div class="col-12">
-            <div class="container-lg" style="width:330px ;">
-                <canvas id="penduduk-Chart"></canvas>
-        </div>
-        </div>
         <div class="mb-5 mb-5 mt-5">
             <li class="nav-item dropdown list-unstyled">
                 <a class="dropdown-toggle active btn btn-yellowwhite float-end" href="#" id="navbarDropdown" role="button"
@@ -119,9 +120,9 @@
                     Ubah Grafik
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><button class="dropdown-item btn" id="bar" href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
-                    <li><button class="dropdown-item" id="pie" href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
-                    <li><button class="dropdown-item" id="doughnut" href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li>
+                    <li><button onclick="ChartType1('bar')" class="dropdown-item btn"  href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
+                    <li><button onclick="ChartType1('pie')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
+                    <li><button onclick="ChartType1('doughnut')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li> 
                     
                     <li>
                         <hr class="dropdown-divider">
@@ -190,11 +191,11 @@
         </nav>
 
         
-        <div class="col-11">
-            <div class="container-lg" style="width: 340px ;">
-                <canvas id="Usaha-Mikro-Chart"></canvas>
+   
+            <div class="container-fluid">
+                <canvas id="Usaha-Mikro-Chart"  style="position: relative; height:40vh; width:80vw; max-width: fit-content; min-width: fit-content;"></canvas>
             </div>
-        </div>
+    
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <div class="mb-5 mb-5 mt-5">
@@ -204,9 +205,9 @@
                         Ubah Grafik
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                        <li><button class="dropdown-item btn" id="bar1" href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
-                        <li><button class="dropdown-item" id="pie1" href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
-                        <li><button class="dropdown-item" id="doughnut1" href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li>
+                        <li><button onclick="ChartType('bar')" class="dropdown-item btn"  href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
+                        <li><button onclick="ChartType('pie')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
+                        <li><button onclick="ChartType('doughnut')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li>   
                         
                         <li>
                             <hr class="dropdown-divider">

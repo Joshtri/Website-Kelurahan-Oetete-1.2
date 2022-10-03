@@ -1,23 +1,3 @@
-const bar = document.getElementById("bar");
-const pie = document.getElementById("pie");
-const doughnut = document.getElementById("doughnut");
-
-bar.addEventListener("click", changebar);
-pie.addEventListener("click", changepie);
-doughnut.addEventListener("click", changedoughnut);
-
-function changebar() {
-  console.log("changebar function");
-}
-
-function changepie() {
-  console.log("changepie function");
-}
-
-function changedoughnut() {
-  console.log("changedoughnut function");
-}
-
 const labels = ["Laki-Laki", "Perempuan"];
 const data = {
   labels: labels,
@@ -33,6 +13,32 @@ const data = {
 };
 
 const config = {
+  type: "bar",
+  data: data,
+  options: {
+    plugins: {
+      title: {
+        display: true,
+        text: "Grafik Status",
+      },
+    },
+  },
+};
+
+const config2 = {
+  type: "doughnut",
+  data: data,
+  options: {
+    plugins: {
+      title: {
+        display: true,
+        text: "Grafik Status",
+      },
+    },
+  },
+};
+
+const config3 = {
   type: "pie",
   data: data,
   options: {
@@ -45,7 +51,7 @@ const config = {
   },
 };
 
-const myChart = new Chart(
+let myChart = new Chart(
   document.getElementById("jeniskelamin-Chart"),
   config
 );
@@ -55,20 +61,20 @@ axios.get("/statistics/statistik/jeniskelamin").then((e) => {
   myChart.update();
 });
 
-function changebar() {
-  const updatetype = "bar";
-  myChart.config.type = updatetype;
-  myChart.update();
-}
 
-function changepie() {
-  const updatetype = "pie";
-  myChart.config.type = updatetype;
-  myChart.update();
-}
+// render init block
+function ChartType(type) {
+  //destroy chart
+  myChart.destroy();
+  if (type === "bar") {
+    myChart = new Chart(document.getElementById("jeniskelamin-Chart"), config);
+  }
 
-function changedoughnut() {
-  const updatetype = "doughnut";
-  myChart.config.type = updatetype;
-  myChart.update();
+  if (type === "doughnut") {
+    myChart = new Chart(document.getElementById("jeniskelamin-Chart"), config2);
+  }
+
+  if (type === "pie") {
+    myChart = new Chart(document.getElementById("jeniskelamin-Chart"), config3);
+  }
 }
