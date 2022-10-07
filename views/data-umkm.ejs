@@ -38,27 +38,28 @@
                     <div id="accordion">
                         <%- include('sidebar'); -%>
                     </div>
+                    <div class="mb-5 mb-5 mt-5">
+                        <li class="nav-item dropdown list-unstyled">
+                            <a class="dropdown-toggle active btn btn-yellowwhite" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-chart-column"></i>    
+                                Ubah Grafik
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><button onclick="ChartType('bar')" class="dropdown-item btn"  href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
+                                <li><button onclick="ChartType('pie')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
+                                <li><button onclick="ChartType('doughnut')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li>
+                                
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <div class="mb-5 mb-5 mt-5">
-                <li class="nav-item dropdown list-unstyled">
-                    <a class="dropdown-toggle active btn btn-yellowwhite" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-chart-column"></i>    
-                        Ubah Grafik
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><button onclick="ChartType('bar')" class="dropdown-item btn"  href="#"><img src="https://img.icons8.com/office/16/000000/futures.png"/>&nbsp&nbspBar Chart</button></li>
-                        <li><button onclick="ChartType('pie')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/flat-round/16/000000/pie-chart-3d.png"/>&nbsp&nbspPie Chart</button></li>
-                        <li><button onclick="ChartType('doughnut')" class="dropdown-item"  href="#"><img src="https://img.icons8.com/office/16/000000/doughnut-chart--v1.png"/>&nbsp&nbspDoughnut Chart</button></li>
-                        
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                    </ul>
-                </li>
-            </div>
+           
         </div>
     </div>
 

@@ -16,6 +16,7 @@ const config = {
   type: "bar",
   data: data,
   options: {
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
@@ -29,6 +30,7 @@ const config2 = {
   type: "doughnut",
   data: data,
   options: {
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
@@ -42,6 +44,7 @@ const config3 = {
   type: "pie",
   data: data,
   options: {
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,

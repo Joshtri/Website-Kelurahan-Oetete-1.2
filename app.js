@@ -36,10 +36,6 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs","pug");
 
 
-
-
-
-
 const pool = mysql.createPool({
   connectionLimit: 100,
   host: process.env.DB_HOST,
