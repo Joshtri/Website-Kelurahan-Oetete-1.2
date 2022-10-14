@@ -1,12 +1,13 @@
-const labels = ["Laki-Laki", "Perempuan"];
+const labels = ["Usaha Mikro", "Usaha Menengah", "Usaha Kecil"];
+
 const data = {
   labels: labels,
   datasets: [
     {
-      label: ["My First dataset"],
-      backgroundColor: ["#2D4263", "#C84B31"],
+      labels: ["My First dataset"],
+      backgroundColor: ["#ECDBBA", "#C84B31", "#2D4263"],
 
-      data: [2, 0],
+      data: [4, 4, 4],
       hoverOffset: 4,
     },
   ],
@@ -16,11 +17,21 @@ const config = {
   type: "bar",
   data: data,
   options: {
+    scales:{
+      x:{
+        ticks:{
+        
+        }
+          
+      }
+    },
+     
+
     maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
-        text: "Grafik Status",
+        text: "Grafik Kategori Usaha",
       },
     },
   },
@@ -34,7 +45,7 @@ const config2 = {
     plugins: {
       title: {
         display: true,
-        text: "Grafik Status",
+        text: "Grafik Kategori Usaha",
       },
     },
   },
@@ -48,17 +59,14 @@ const config3 = {
     plugins: {
       title: {
         display: true,
-        text: "Grafik Status",
+        text: "Grafik Kategori Usaha",
       },
     },
   },
 };
 
-let myChart = new Chart(
-  document.getElementById("jeniskelamin-Chart"),
-  config
-);
-axios.get("/statistics/statistik/jeniskelamin").then((e) => {
+let myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config);
+axios.get("/statistics/statistik/umkm").then((e) => {
   console.log(e);
   myChart.data.datasets[0].data = e.data.data;
   myChart.update();
@@ -70,14 +78,14 @@ function ChartType(type) {
   //destroy chart
   myChart.destroy();
   if (type === "bar") {
-    myChart = new Chart(document.getElementById("jeniskelamin-Chart"), config);
+    myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config);
   }
 
   if (type === "doughnut") {
-    myChart = new Chart(document.getElementById("jeniskelamin-Chart"), config2);
+    myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config2);
   }
 
   if (type === "pie") {
-    myChart = new Chart(document.getElementById("jeniskelamin-Chart"), config3);
+    myChart = new Chart(document.getElementById("Usaha-Mikro-Chart"), config3);
   }
 }

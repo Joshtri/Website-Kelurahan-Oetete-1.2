@@ -46,18 +46,25 @@ exports.view_pekerjaan = (req, res) => {
     //show data
     connection.query('SELECT * FROM tumbal', (err,rows)=>{
         //when done with the connection, release it. 
+      connection.query('SELECT * FROM tumbal', (err,rows)=>{
+        //when done with the connection, release it. 
+        connection.query('SELECT * FROM tumbal', (err,rows)=>{
+          //when done with the connection, release it. 
+          connection.query('SELECT * FROM tumbal', (err,rows)=>{
+            //when done with the connection, release it. 
         connection.release();
 
-        if(!err){
-            res.render("data-pekerjaan",{rows});
-        }
-        else{
-            console.log(err);
-        }
-        console.log('The data from user table: \n', rows);
-
+            if(!err){
+                res.render("data-pekerjaan",{rows});
+            }
+            else{
+                console.log(err);
+            }
+            console.log('The data from user table: \n', rows);
+          });
+        });
+      });
     });
-
   });
 };
 

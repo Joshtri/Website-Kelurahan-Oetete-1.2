@@ -1,6 +1,4 @@
-const labels = ["Belum/Tidak Pernah Sekolah", "Belum/Tidak Tamat SD/SDLB/MI/Paket A", "SD/SDLB/MI/Paket A",
-    "SMP/SMPLB/MTs/Paket B", "SMA/SMLB/MA/SMK/MAK/Paket C", "DI/DII/DIII",
-    "DIV/S1", "S2", "S3"];
+const labels = ["Sudah Menikah", "Belum Menikah", "Cerai Hidup", "Cerai Mati"];
 
 const data = {
     labels: labels,
@@ -8,19 +6,14 @@ const data = {
         {
             label: ["My First dataset"],
             backgroundColor: [
-              "#62374E",
-              "#007880",
-              "#2D4263",
-              "#ECDBBA",
-              "#C84B31",
-              "#1E5128",
-              "#FFD700",
-              "#FF731D",
-              "#EEE3CB",
+                "#C84B31",
+                "#ECDBBA",
+                "#2D4263",
+                "#1E5128"
             ],
 
-            data: [2, 10, 3, 5, 6, 7, 8, 5, 2, 2],
-            hoverOffset: 9,
+            data: [2, 10, 50, 20],
+            hoverOffset: 4,
         },
     ],
 };
@@ -33,7 +26,7 @@ const config = {
         plugins: {
             title: {
                 display: true,
-                text: 'Grafik Pendidikan'
+                text: 'Grafik Status Pernikahan'
             }
         }
     },
@@ -47,11 +40,12 @@ const config2 = {
       plugins: {
           title: {
               display: true,
-              text: 'Grafik Pendidikan'
+              text: 'Grafik Status Pernikahan'
           }
       }
   },
 };
+
 
 const config3 = {
   type: "pie",
@@ -61,14 +55,15 @@ const config3 = {
       plugins: {
           title: {
               display: true,
-              text: 'Grafik Pendidikan'
+              text: 'Grafik Status Pernikahan'
           }
       }
   },
 };
 
-let myChart = new Chart(document.getElementById("Pendidikan-Chart"), config);
-axios.get('/statistics/statistik/pendidikan').then(e => {
+let myChart = new Chart(document.getElementById("Status-Chart"), config);
+
+axios.get('/statistik/statistik/status').then(e => {
     console.log(e);
     myChart.data.datasets[0].data = e.data.data;
     myChart.update();
@@ -80,14 +75,14 @@ function ChartType(type) {
   //destroy chart
   myChart.destroy();
   if (type === "bar") {
-    myChart = new Chart(document.getElementById("Pendidikan-Chart"), config);
+    myChart = new Chart(document.getElementById("Status-Chart"), config);
   }
 
   if (type === "doughnut") {
-    myChart = new Chart(document.getElementById("Pendidikan-Chart"), config2);
+    myChart = new Chart(document.getElementById("Status-Chart"), config2);
   }
 
   if (type === "pie") {
-    myChart = new Chart(document.getElementById("Pendidikan-Chart"), config3);
+    myChart = new Chart(document.getElementById("Status-Chart"), config3);
   }
 }

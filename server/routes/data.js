@@ -24,7 +24,10 @@ router.get('/data-pendidikan',userController.view_pendidikan);
 router.get('/data-pekerjaan',userController.view_pekerjaan);
 
 router.get('/data-umur',userController.view_umur );
-   
+
+router.get('/data-pekerjaan', function(req,res,next){
+    
+});
 
 router.get('/data-jeniskelamin', userController.view_jeniskelamin);
 
