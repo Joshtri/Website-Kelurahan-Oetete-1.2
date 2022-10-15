@@ -95,7 +95,7 @@ router.get('/statistik/pekerjaan', function (req, res, next) {
                                             //when done with the connection, release it.
                                         connection.query("SELECT SUM(pekerjaan = 'SWASTA') AS TotalSwasta FROM penduduk", (err, rows9) => {
                                                     //when done with the connection, release it.
-                                                connection.query("SELECT SUM(pekerjaan = 'PegawaiBUMN') AS TotalBUMN FROM penduduk", (err, rows10) => {
+                                                connection.query("SELECT SUM(pekerjaan = 'Pegawai BUMN') AS TotalBUMN FROM penduduk", (err, rows10) => {
                                                         //when done with the connection, release it.
                                                     connection.query("SELECT SUM(pekerjaan = 'Pekerja Lepas') AS TotalPekerjaLepas FROM penduduk", (err, rows11) => {
                                                             //when done with the connection, release it.
@@ -155,7 +155,7 @@ router.get('/statistik/status', function (req, res, next) {
                         //when done with the connection, release it.
                     connection.query("SELECT SUM(status_perkawinan = 'Cerai Hidup') AS TotalCeraiHidup FROM penduduk", (err, rows3) => {
                             //when done with the connection, release it.
-                        connection.query("SELECT SUM(status_perkawinan = 'Cerai Hidup') AS TotalCeraiMati FROM penduduk", (err, rows4) => {
+                        connection.query("SELECT SUM(status_perkawinan = 'Cerai Mati') AS TotalCeraiMati FROM penduduk", (err, rows4) => {
                                 //when done with the connection, release it.
     
                             if (!err) {
@@ -169,7 +169,7 @@ router.get('/statistik/status', function (req, res, next) {
                                         ],
                                         data: [rows1[0].TotalBelumMenikah, rows2[0].TotalSudahMenikah, rows3[0].TotalCeraiHidup, rows4[0].TotalCeraiMati],
                                         hoverOffset: 4,
-                                    },
+                                    },  
                                 );
                             } else {
                                 console.log(err);
@@ -251,7 +251,7 @@ router.get('/statistik/jeniskelamin', function (req, res, next) {
             //show data
             // SELECT SUM (jenis_kelamin = 'Perempuan') AS Total_perempuan FROM penduduk
     
-        connection.query("SELECT SUM(jenis_kelamin ='laki-laki') AS Total_laki FROM penduduk", (err, rows1) => {
+        connection.query("SELECT SUM(jenis_kelamin ='Laki-Laki') AS Total_laki FROM penduduk", (err, rows1) => {
                     //when done with the connection, release it.
             connection.query("SELECT SUM (jenis_kelamin = 'Perempuan') AS Total_perempuan FROM penduduk", (err, rows2) => {
                     //when done with the connection, release it.

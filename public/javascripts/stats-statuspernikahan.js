@@ -1,4 +1,4 @@
-const labels = ["Sudah Menikah", "Belum Menikah", "Cerai Hidup", "Cerai Mati"];
+const labels = ["Belum Menikah", "Sudah Menikah", "Cerai Hidup", "Cerai Mati"];
 
 const data = {
     labels: labels,
@@ -12,7 +12,7 @@ const data = {
                 "#1E5128"
             ],
 
-            data: [0, 0, 0, 10],
+            data: [0, 0, 0, 0],
             hoverOffset: 4,
         },
     ],
@@ -63,7 +63,7 @@ const config3 = {
 
 let myChart = new Chart(document.getElementById("Status-Chart"), config);
 
-axios.get('/statistik/statistik/status').then(e => {
+axios.get('/statistics/statistik/status').then(e => {
     console.log(e);
     myChart.data.datasets[0].data = e.data.data;
     myChart.update();

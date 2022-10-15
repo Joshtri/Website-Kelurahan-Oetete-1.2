@@ -86,9 +86,19 @@
                     <% var number = 1; %>            
                     <tr style="color:  var(--textcolor);">
                         <td scope="row" class="text-center"><%= number%></td>
-                        <td scope="row" class="text-center">3</td>
-                        <td scope="row" class="text-center">4</td>
-                        <td scope="row" class="text-center">7</td>
+
+                        <% for (let row of rows1) {%>
+                        <td scope="row" class="text-center"><%= row.Total_laki %></td>
+                        <% }%>
+
+                        <% for (let row of rows2) {%>
+                        <td scope="row" class="text-center"><%= row.Total_perempuan %></td>
+                        <% }%>
+
+                        <% for (let row of rows3) {%>
+                        <td scope="row" class="text-center"><%= row.TotalJK %></td>
+                        <% }%>
+
                     </tr>
                     <% number++%>
                 </tbody>
