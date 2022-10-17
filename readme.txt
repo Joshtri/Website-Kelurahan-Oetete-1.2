@@ -11,16 +11,24 @@ list chart aman :
 	6. Chart UMKM 
 
 
-Note Task untuk tim oetete : 
+teknologi pendukung dalam pembuatan Website Info Grafis. 
 
-	- Sulthan tolong revisi page visi_misi dan struktur organisasi.
-	- Tesa & Sulthan tolong susun struktur organisasi oetete dengan referensi dri fontein. karena oetete
-	  sudah ada lampiran data berupa nama pekerja disitu dengan jabatannya. tapi tidak ada NIP. intinya susun
-	  lalu buat di pdf. lalu tampilkan di websitenya. 
- 	- Sulthan tolong cek warna statistik di Info Grafis Oetete, apa sudah sinkron dengan warna yg lu tentukan.klo blm berarti diubah. 
+- Node Js
+- Express Js
+	-library" yg digunakan : 
+	- node-modules
+	- express
+	- ejs
+	- nodemon
+	- http-errors
+	- morgan
+	- dotenv
+	- consolidate
+	- mysql
+	- cors
+	- parser
+	- express-favicon
+
+DATABASE :
+	mysql dari xampp (phpmyadmin).
 	
-
-!!IMPORTANT!!
-
-b serahin penuh smpe tgl 10, hari sblm mo hosting su harus kelar. b su mo masuk admin.
-jdi b sn pegang web lgi. @Sultan Lamarian @Tesalonika Cornelia pegang penuh. susun dia pu struktur pemerintahan juga. dan revisi juga utk visi & misi.
