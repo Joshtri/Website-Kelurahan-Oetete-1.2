@@ -11,24 +11,11 @@ list chart aman :
 	6. Chart UMKM 
 
 
-teknologi pendukung dalam pembuatan Website Info Grafis. 
+teknologi yang digunakan dalam pembuatan Website Info Grafis. 
 
-- Node Js
-- Express Js
-	-library" yg digunakan : 
-	- node-modules
-	- express
-	- ejs
-	- nodemon
-	- http-errors
-	- morgan
-	- dotenv
-	- consolidate
-	- mysql
-	- cors
-	- parser
-	- express-favicon
-
-DATABASE :
-	mysql dari xampp (phpmyadmin).
-	
+- Node Js - v16.17.0
+- Express Js - 4.16.1
+- Bootstrap 5.02
+- EJS Template Engine
+- mysql
+- Chart.js
