@@ -86,9 +86,10 @@
                <tr style="color:  var(--textcolor);">
                    <th scope="col" class="text-center">No</th>
                    <th scope="col" class="text-center">Usaha Mikro</th>
-                   <th scope="col" class="text-center">Usaha Kecil</th>
                    <th scope="col" class="text-center">Usaha Menengah</th>
+                   <th scope="col" class="text-center">Usaha Kecil</th>
                    <th scope="col" class="text-center">Total</th>
+                   
 
                </tr>
            </thead>
@@ -96,10 +97,23 @@
             <% var number = 1; %>
                <tr style="color:  var(--textcolor);">
                    <td scope="row" class="text-center"><%= number %></td>
-                   <td scope="row" class="text-center">3</td>
-                   <td scope="row" class="text-center">3</td>
-                   <td scope="row" class="text-center">4</td>
-                   <td scope="row" class="text-center">10</td>
+
+                   <% for (let row of rows1) {%>
+                   <td scope="row" class="text-center"><%= row.Tmikro %></td>
+                   <% }%>
+                   
+                   <% for (let row of rows3) {%>
+                   <td scope="row" class="text-center"><%= row.Tmenengah %></td>
+                   <% }%>
+
+                   <% for (let row of rows3) {%>
+                   <td scope="row" class="text-center"><%= row.Tkecil %></td>
+                   <% }%>
+
+                   <% for (let row of rows4) {%>
+                   <td scope="row" class="text-center"><%= row.TotalUMKM %></td>
+                   <% }%>
+                 
                    <% number++; %>
                </tr>                        
            </tbody>

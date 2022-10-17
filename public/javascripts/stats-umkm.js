@@ -7,7 +7,7 @@ const data = {
       labels: ["My First dataset"],
       backgroundColor: ["#ECDBBA", "#C84B31", "#2D4263"],
 
-      data: [4, 4, 4],
+      data: [0, 0, 0],
       hoverOffset: 4,
     },
   ],

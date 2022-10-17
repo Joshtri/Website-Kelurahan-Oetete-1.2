@@ -25,9 +25,9 @@ router.get('/data-pekerjaan',userController.view_pekerjaan);
 
 router.get('/data-umur',userController.view_umur );
 
-router.get('/data-pekerjaan', function(req,res,next){
-    
-});
+// router.get('/data-umkm', function(req,res,next){
+//     res.render('data-umkm');
+// });
 
 router.get('/data-jeniskelamin', userController.view_jeniskelamin);
 
