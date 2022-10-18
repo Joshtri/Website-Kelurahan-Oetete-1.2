@@ -5,7 +5,7 @@ var router = express.Router();
 /* GET peta page. */
 
 router.get('/peta',function (req,res,next){
-  res.render('peta', {text : "Apa" })
+  res.render('peta')
 })
 
 module.exports = router;

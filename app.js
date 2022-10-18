@@ -51,7 +51,6 @@ pool.getConnection((err,connection)=>{
 });
 
 var indexRouter = require("./server/routes/index");
-var usersRouter = require("./server/routes/users");
 var profilRouter = require("./server/routes/profil");
 var petaRouter = require("./server/routes/peta");
 var pemerintahanRouter = require("./server/routes/gov");
@@ -61,7 +60,6 @@ var statisticsRouter = require("./server/routes/stats");
 
 //Router.
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/profil", profilRouter);
 app.use("/", petaRouter);
 app.use("/pemerintahan", pemerintahanRouter);

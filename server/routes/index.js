@@ -3,13 +3,7 @@ var router = express.Router();
 const mysql = require("mysql");
 // const userController = require('../controllers')
  
-//Connection Pool
-let connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-});
+
 
 const pool = mysql.createPool({
   connectionLimit: 100,
@@ -21,7 +15,7 @@ const pool = mysql.createPool({
 
 /* GET home page. */
 
-router.get('/beranda', function(req, res, next) {
+router.get('/', function(req, res, next) {
     //connect db.
     pool.getConnection((err, connection) => {
       if (err) throw err; //NOT CONNECTED.
@@ -58,50 +52,18 @@ router.get('/beranda', function(req, res, next) {
     });
 });
 
-// router.get('/beranda', function(req, res, next) {
-//     //connect db.
-//     pool.getConnection((err, connection) => {
-//       if (err) throw err; //NOT CONNECTED.
-//       console.log(`Connected as ID ` + connection.threadId);
-  
-//       //show data
-//       connection.query("SELECT file_article, judul_publish, tanggal_terbit, id_publish FROM publikasi", (err, rows) => {
-//         //when done with the connection, release it.
-//         connection.release();
-  
-//         if (!err) {
-//           res.render("data-publikasi", { rows });
-//         } else {
-//           console.log(err);
-//         }
-//         console.log("The data from user table: \n", rows);
-//       });
-//     });
-// });
 
-router.get('/header', function(req,res,next){
-  res.render('header', {text : "Apa" })
-
-});
 
 router.get('/footer', function(req,res,next){
-  res.render('footer', {text : "Apa" })
+  res.render('footer')
 
 });
 
-// router.get('/error', function(req,res,next){
-//   res.render('error')
-
-// });
 
 router.get('/sidebar', function(req,res,next){
   res.render('sidebar')
 
 });
 
-router.get('/tester', function(req,res,next){
-  res.render('tester')
-
-});
 
 module.exports = router;  
