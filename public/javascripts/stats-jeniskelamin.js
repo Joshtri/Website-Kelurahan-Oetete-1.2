@@ -20,7 +20,7 @@ const config = {
     plugins: {
       title: {
         display: true,
-        text: "Grafik Status",
+        text: "Grafik Jenis Kelamin",
       },
     },
   },
