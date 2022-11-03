@@ -28,7 +28,11 @@
 .btn-bluedark:hover{
     color: white;
 }
-
+#carouselExampleCaptions .carousel-caption{
+    color: white;
+    background-color: rgba(22, 22, 22, 0.553);
+    border-radius: 5px;
+}
 
 
 :root {
@@ -59,6 +63,9 @@ body {
     background-color: var(--background-color);
     color: var(--textcolor);
 
+}
+nav{
+    font-family: "Barlow";
 }
 h3{
     font-family: "Barlow",sans-serif;
@@ -102,7 +109,7 @@ footer a {
 }
 
 .hover-maps {
-    background: linear-gradient(to right, rgb(0, 0, 0) 50%, #6175b9 50%, #347aa8);
+    background: linear-gradient(to right, var(--textcolor) 50%, #6175b9 50%, #347aa8);
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -386,7 +393,14 @@ footer a {
     transform: scale(1.15);
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06); */
 }
-
+.card-body:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+.card-body{
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    
+}
 
 @keyframes blink {
     50% {
