@@ -9,7 +9,7 @@ const enableDarkMode = () => {
   // 2. Update darkMode in localStorage
   localStorage.setItem('darkMode', 'enabled');
 
-  toggle.src = "/images/icons8-sun-96.png";
+  toggle.src = "/images/brightness-high.svg";
 }
 
 const disableDarkMode = () => {
@@ -18,7 +18,7 @@ const disableDarkMode = () => {
   // 2. Update darkMode in localStorage 
   localStorage.setItem('darkMode', null);
 
-  toggle.src = "/images/icons8-do-not-disturb-ios-96.png"
+  toggle.src = "/images/moon-fill.svg"
 }
  
 // If the user already visited and enabled darkMode
