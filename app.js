@@ -14,7 +14,7 @@ require("dotenv").config();
 
 var app = express();
 
-const port = process.env.PORT || "3001";
+const port = process.env.PORT || "3000";
 
 // static files.
 app.use(express.static(__dirname + "/public"));
