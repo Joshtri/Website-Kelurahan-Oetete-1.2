@@ -40,7 +40,7 @@ router.get('/', function(req, res, next) {
                           } else {
                             console.log(err);
                           }
-                          console.log("The data from user table: \n",rows,rows1, rows2,rows3, rows5, rows6, rows7,rows8);
+                          // console.log("The data from user table: \n",rows,rows1, rows2,rows3, rows5, rows6, rows7,rows8);
                         });
                        }); 
                     }); 
