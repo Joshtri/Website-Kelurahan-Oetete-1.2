@@ -115,7 +115,7 @@ router.get('/statistik/pekerjaan', function (req, res, next) {
                                                                         } else {
                                                                             console.log(err);
                                                                         }
-                                                                        console.log("The data from user table: \n",  rows1, rows2, rows3, rows4, rows5, rows6, rows7, rows8, rows9, rows10, rows11, rows12, rows13, rows14);
+                                                                        // console.log("The data from user table: \n",  rows1, rows2, rows3, rows4, rows5, rows6, rows7, rows8, rows9, rows10, rows11, rows12, rows13, rows14);
                             
                                         }); });});});});});
                                     }); 
@@ -167,7 +167,7 @@ router.get('/statistik/status', function (req, res, next) {
                             } else {
                                 console.log(err);
                             }
-                            console.log("The data from user table: \n",  rows1, rows2, rows3, rows4);
+                            // console.log("The data from user table: \n",  rows1, rows2, rows3, rows4);
                     
                         }); 
                     });
@@ -218,7 +218,7 @@ router.get('/statistik/pendidikan', function (req, res, next) {
                                                 } else {
                                                     console.log(err);
                                                 }
-                                                console.log("The data from user table: \n",  rows1, rows2, rows3, rows4, rows5, rows6, rows7, rows8, rows9);
+                                                // console.log("The data from user table: \n",  rows1, rows2, rows3, rows4, rows5, rows6, rows7, rows8, rows9);
                         
                                     });
                                 }); 
@@ -263,7 +263,7 @@ router.get('/statistik/jeniskelamin', function (req, res, next) {
                     } else {
                         console.log(err);
                     }
-                    console.log("The data from user table: \n",  rows2, rows1);
+                    // console.log("The data from user table: \n",  rows2, rows1);
             });
         });
     });
@@ -305,7 +305,6 @@ router.get('/statistik/umkm', function (req, res, next) {
                             } else {
                                 console.log(err);
                             }
-                            console.log("The data from user table: \n", rows1, rows2, rows3);
                 });
             });
         });
@@ -343,7 +342,7 @@ router.get('/statistik/penduduk', function (req, res, next) {
                     } else {
                         console.log(err);
                     }
-                    console.log("The data from user table: \n",  rows2, rows1);
+                    // console.log("The data from user table: \n",  rows2, rows1);
             });
         });
     });
