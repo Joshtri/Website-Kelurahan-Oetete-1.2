@@ -37,7 +37,7 @@
 
 :root {
     --navbarcolor2: #607EAA;
-    --navbarcolor: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #746FA6;
+    --navbarcolor: #061952;
     --footercolor: #ad8f49;
     --background-color: white;
     --textcolor: black;
@@ -66,6 +66,9 @@ body {
 }
 nav{
     font-family: "Barlow";
+}
+nav a:hover{
+    font-weight: bold;
 }
 h3{
     font-family: "Barlow",sans-serif;
@@ -190,7 +193,7 @@ footer a {
 
 
 .navbar .navbar-nav .nav-link:hover {
-    color: #000000;
+    color: #ffffff;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -278,7 +281,7 @@ footer a {
     bottom: 0;
     width: 0;
     height: 3px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgb(255, 255, 255);
     background-image: linear-gradient(to right, rgb(133, 107, 107), rgb(28, 103, 173));
 
     transition: width 0.25s ease-out;

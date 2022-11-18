@@ -319,13 +319,12 @@
                 </tr>
                 </thead>
                 <tbody >
-                    <% var number = 1; %>
                 
-                <% for (let row of rows) {%>
                 <tr style="color:  var(--textcolor);">
-                    <td scope="row" class="text-center"><%= number%></td>
+
+
+                    <td scope="row" class="text-center">1</td>
                     <td scope="row" class="text-center">Potensi Kelurahan Oetete</td>
-                    <!--  nama sebenarnya >> <%= row.judul_publish %> -->
                     <td scope="row" class="text-center">PDF</td>
                     <td scope="row" class="text-center">
                         
@@ -355,7 +354,6 @@
                             </div>
                             </div>
                         </div>
-                        <!-- href="<%= row.file_article %>" -->
                         <a  href ="https://drive.google.com/u/0/uc?id=1uxI7rfOwl9Onf9EPoFv7Ye2b26VQCQAE&export=download"class="btn btn-primary" download="">
                             <img src="https://img.icons8.com/wired/16/000000/download--v1.png"/>&nbsp;
                             Download
@@ -363,8 +361,7 @@
                     </td>
                     
                 </tr>
-                <% }%>
-                <% number++%>
+            
                 </tbody>
           </table>
             </div>
