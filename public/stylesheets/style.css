@@ -363,48 +363,6 @@ footer a {
 }
 
 
-.rectangle1,
-.rectangle2,
-.rectangle3,
-.rectangle4 {
-    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
-
-    cursor: pointer;
-}
-
-.rectangle1:hover,
-.rectangle2:hover,
-.rectangle3:hover,
-.rectangle4:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
-}
-
-.rectangle5,
-.rectangle6,
-.rectangle7,
-.rectangle8 {
-    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
-
-    cursor: pointer;
-}
-
-.rectangle5:hover,
-.rectangle6:hover,
-.rectangle7:hover,
-.rectangle8:hover {
-    transform: scale(1.15);
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06); */
-}
-.card-body:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
-}
-.card-body{
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-    
-}
-
 @keyframes blink {
     50% {
         border-right: none;

@@ -1,17 +1,23 @@
 {
-  "dependencies": {
-    "consolidate": "^0.16.0",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "express-favicon": "^2.0.1",
-    "http-errors": "^2.0.0",
-    "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
-    "node": "^16.18.0",
-    "nodemon": "^2.0.20"
-  },
+  "name": "Website-Kelurahan-Oetete-1.3-fix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.0",
+    "nodemon": "^3.1.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.37.3"
   }
 }
